@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = ["Home", "Vault", "Prologue", "Contact"];
 
 const Navbar = () => {
   // State for toggling audio and visual indicator
@@ -83,7 +83,7 @@ const Navbar = () => {
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
-              {navItems.map((item, index) => (
+              {["Home", "Prologue", "Vault", "Contact"].map((item, index) => (
                 <a
                   key={index}
                   href={`#${item.toLowerCase()}`}
